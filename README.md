@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quanto Recipt Scanner
 
-## Getting Started
+## Setup Instructions
 
-First, run the development server:
+1. Clone the repository:
+   ```
+   git clone https://github.com/Glen-Zheng/Quanto-Receipt-Scanner-App && cd into the director
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Run the development server:
+   ```
+   npm run dev
+   ```
+   The app should now be running on [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Build the project (for production):
+   ```
+   npm run build
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. Start the production server:
+   ```
+   npm start
+   ```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## API Choice and Rationale
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I chose the TabScanner API to not reinvent the wheel and use something that would be simple and less voltaile, like an LLM. The API took in the image as a param and outputted the information we wanted, so I decided to use this to keep it simple Furthermore, AI APIs often required extensive registration processes with banking information. This API, although not the best, does the job in most cases and can read our receipts (works well for test case 4). The code and its modularity was the main focus of this project, and the API can always be improved, which is why I chose something straightforward and that makes the developer's life easier!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Limitations and Assumptions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The API can be a little disfunctional at times. Works well for test case 4. (API can always be improved).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
