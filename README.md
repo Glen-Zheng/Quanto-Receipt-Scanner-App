@@ -1,5 +1,7 @@
 # Quanto Recipt Scanner
 
+https://quanto-receipt-scanner-app-omc9.vercel.app/
+
 ## Setup Instructions
 
 1. Clone the repository:
