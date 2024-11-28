@@ -35,6 +35,7 @@ export default function Home() {
         });
 
         const data = await response.json();
+        console.log(data);
         const token = data.token;
 
         if (!response.ok) {
@@ -60,8 +61,8 @@ export default function Home() {
             console.log("API request raw data: ", data1);
             const receiptData = {
               vendorName: data1.result.establishment || " ",
-              lineItems: data1.result.lineItems || "",
-              totalAmount: data1.result.total || "",
+              lineItems: data1.result.lineItems || null,
+              totalAmount: data1.result.total || null,
             };
             console.log("here is your receipt's info: ", receiptData);
 
