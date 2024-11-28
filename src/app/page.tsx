@@ -5,7 +5,9 @@ import Nav from "../../components/Nav";
 
 interface LineItem {
   item_name: string;
-  item_value: number;
+  lineTotal: number;
+  price: number;
+  descClean: string;
 }
 
 interface Receipt {
